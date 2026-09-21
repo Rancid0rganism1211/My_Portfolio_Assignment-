@@ -1,0 +1,174 @@
+/* --- CSS Variables (Navy & Gold Theme) --- */
+:root {
+    --primary-navy: #0a2540;
+    --accent-gold: #c5a059;
+    --bg-light: #f4f6f9;
+    --card-bg: #ffffff;
+    --text-main: #333333;
+    --border-color: #d1d5db;
+}
+
+/* --- Global Styles --- */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: var(--bg-light);
+    color: var(--text-main);
+    line-height: 1.6;
+}
+
+/* --- Header & Flexbox Navigation --- */
+.site-header {
+    background-color: var(--primary-navy);
+    color: #ffffff;
+    padding: 2rem;
+}
+
+.site-header h1 {
+    margin: 0 0 0.5rem 0;
+    color: #ffffff;
+}
+
+.site-header p {
+    margin: 0 0 1.5rem 0;
+    color: var(--accent-gold);
+}
+
+.nav-bar ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    gap: 2rem;
+}
+
+.nav-bar a {
+    color: #ffffff;
+    text-decoration: none;
+    font-weight: bold;
+    transition: color 0.3s ease;
+}
+
+.nav-bar a:hover {
+    color: var(--accent-gold);
+}
+
+/* --- Main Layout Sections --- */
+.main-container {
+    max-width: 900px;
+    margin: 2rem auto;
+    padding: 0 1.5rem;
+}
+
+.content-section {
+    background-color: var(--card-bg);
+    padding: 2rem;
+    margin-bottom: 2rem;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+}
+
+.content-section h2 {
+    color: var(--primary-navy);
+    border-bottom: 2px solid var(--accent-gold);
+    padding-bottom: 0.5rem;
+    margin-top: 0;
+}
+
+/* --- About Me Flex Layout --- */
+.about-flex {
+    display: flex;
+    gap: 2rem;
+    align-items: center;
+}
+
+.profile-img {
+    width: 150px;
+    height: 150px;
+    object-fit: cover;
+    border-radius: 50%;
+    border: 3px solid var(--accent-gold);
+}
+
+.image-caption {
+    font-size: 0.85rem;
+    color: #666;
+}
+
+/* --- Quick Facts Table Styling --- */
+.section-subtitle {
+    font-style: italic;
+    color: #555;
+}
+
+.styled-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 1rem;
+}
+
+.styled-table th, .styled-table td {
+    padding: 12px 15px;
+    border: 1px solid var(--border-color);
+    text-align: left;
+}
+
+.styled-table th {
+    background-color: var(--primary-navy);
+    color: #ffffff;
+}
+
+.styled-table tr:nth-child(even) {
+    background-color: #f9fafb;
+}
+
+/* --- Hobbies Cards Grid (Week 2 Preview) --- */
+.hobbies-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 1rem;
+    margin-top: 1rem;
+}
+
+.hobby-card {
+    background-color: var(--bg-light);
+    border: 1px solid var(--border-color);
+    padding: 1.2rem;
+    border-radius: 6px;
+    border-left: 4px solid var(--accent-gold);
+}
+
+.hobby-card h3 {
+    margin-top: 0;
+    color: var(--primary-navy);
+    font-size: 1.1rem;
+}
+
+/* --- Fun Fact Box --- */
+.fun-fact-box {
+    background-color: #eef2f7;
+    border-left: 4px solid var(--accent-gold);
+    padding: 1.5rem;
+    border-radius: 6px;
+    margin-bottom: 2rem;
+}
+
+.fun-fact-box h2 {
+    color: var(--primary-navy);
+    margin-top: 0;
+}
+
+/* --- Footer --- */
+.site-footer {
+    background-color: var(--primary-navy);
+    color: #ffffff;
+    text-align: center;
+    padding: 2rem;
+    margin-top: 3rem;
+}
+
+.site-footer a {
+    color: var(--accent-gold);
+    text-decoration: none;
+}

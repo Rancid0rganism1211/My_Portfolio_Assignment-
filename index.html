@@ -4,14 +4,16 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Prince Appiah - About Me</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
-    <!-- Header Section -->
-    <header>
-        <h1>Prince Appiah</h1>
-        <p>Computer Science Student, Ghana</p>
-        <nav>
+    <header class="site-header">
+        <div class="header-content">
+            <h1>Prince Appiah</h1>
+            <p>Computer Science Student, Ghana</p>
+        </div>
+        <nav class="nav-bar">
             <ul>
                 <li><a href="#about">About</a></li>
                 <li><a href="#quick-facts">Quick Facts</a></li>
@@ -21,22 +23,22 @@
         </nav>
     </header>
 
-    <!-- Main Content Area -->
-    <main>
-        <!-- About Me Section -->
-        <section id="about">
+    <main class="main-container">
+        <section id="about" class="content-section">
             <h2>About Me</h2>
-            <!-- Replace 'profile.jpg' with your actual photo file name -->
-            <img src="profile.jpg" alt="Prince Appiah photo" width="150">
-            <p><em>Prince Appiah, Computer Science Student, 2026.</em></p>
-            <p>My name is Prince Appiah. I am a Computer Science and Information Technology student in Ghana, currently in my final year. I enjoy building web applications with React and JavaScript, solving complex logic problems, and exploring new technologies.</p>
+            <div class="about-flex">
+                <img src="profile.jpg" alt="Prince Appiah photo" class="profile-img">
+                <div>
+                    <p class="image-caption"><em>Prince Appiah, Computer Science Student, 2026.</em></p>
+                    <p>My name is Prince Appiah. I am a Computer Science and Information Technology student in Ghana, currently in my final year. I enjoy building web applications with React and JavaScript, solving complex logic problems, and exploring new technologies.</p>
+                </div>
+            </div>
         </section>
 
-        <!-- Quick Facts Table Section -->
-        <section id="quick-facts">
+        <section id="quick-facts" class="content-section">
             <h2>Quick Facts</h2>
-            <p>A few quick facts about me</p>
-            <table>
+            <p class="section-subtitle">A few quick facts about me</p>
+            <table class="styled-table">
                 <thead>
                     <tr>
                         <th>Category</th>
@@ -68,27 +70,35 @@
             </table>
         </section>
 
-        <!-- Hobbies & Interests Section -->
-        <section id="hobbies">
+        <section id="hobbies" class="content-section">
             <h2>Hobbies & Interests</h2>
-            <ul>
-                <li>Building full-stack web apps using React, Node.js, and Tailwind CSS.</li>
-                <li>Playing chess and analyzing tactical game strategies.</li>
-                <li>Gaming, including titles like Call of Duty Mobile and Assassin's Creed.</li>
-                <li>Listening to Afrobeat playlists and discovering new music on Spotify.</li>
-            </ul>
+            <div class="hobbies-grid">
+                <div class="hobby-card">
+                    <h3>Web Development</h3>
+                    <p>Building full-stack web apps using React, Node.js, and Tailwind CSS.</p>
+                </div>
+                <div class="hobby-card">
+                    <h3>Chess</h3>
+                    <p>Playing chess and analyzing tactical game strategies.</p>
+                </div>
+                <div class="hobby-card">
+                    <h3>Gaming</h3>
+                    <p>Playing titles like Call of Duty Mobile and Assassin's Creed.</p>
+                </div>
+                <div class="hobby-card">
+                    <h3>Music & Tech</h3>
+                    <p>Listening to Afrobeat playlists and discovering new music on Spotify.</p>
+                </div>
+            </div>
         </section>
 
-        <!-- Fun Fact Sidebar / Section -->
-        <aside id="fun-fact">
+        <aside id="fun-fact" class="fun-fact-box">
             <h2>Fun Fact</h2>
-            <p>This "About Me" project is built progressively from semantic HTML all the way to advanced CSS Grid layouts!</p>
+            <p>This week we added CSS variables, custom styling, Flexbox navigation, and organized hobby cards!</p>
         </aside>
     </main>
 
-    <!-- Footer Section -->
-    <footer id="contact">
-        <h2>Contact</h2>
+    <footer id="contact" class="site-footer">
         <p>Email: <a href="mailto:prince.appiah@example.com">prince.appiah@example.com</a></p>
         <p>&copy; 2026 Prince Appiah. Built for Web Development.</p>
     </footer>
