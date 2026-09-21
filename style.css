@@ -1,4 +1,4 @@
-/* --- CSS Variables (Navy & Gold Theme) --- */
+/* --- CSS Variables --- */
 :root {
     --primary-navy: #0a2540;
     --accent-gold: #c5a059;
@@ -8,7 +8,6 @@
     --border-color: #d1d5db;
 }
 
-/* --- Global Styles --- */
 body {
     font-family: Arial, sans-serif;
     margin: 0;
@@ -22,17 +21,29 @@ body {
 .site-header {
     background-color: var(--primary-navy);
     color: #ffffff;
-    padding: 2rem;
+    padding: 1.5rem 2rem;
 }
 
-.site-header h1 {
-    margin: 0 0 0.5rem 0;
+.header-top {
+    max-width: 1100px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 1rem;
+}
+
+.header-content h1 {
+    margin: 0;
     color: #ffffff;
+    font-size: 1.8rem;
 }
 
-.site-header p {
-    margin: 0 0 1.5rem 0;
+.header-content p {
+    margin: 0.2rem 0 0 0;
     color: var(--accent-gold);
+    font-size: 0.9rem;
 }
 
 .nav-bar ul {
@@ -40,7 +51,7 @@ body {
     padding: 0;
     margin: 0;
     display: flex;
-    gap: 2rem;
+    gap: 1.5rem;
 }
 
 .nav-bar a {
@@ -54,17 +65,42 @@ body {
     color: var(--accent-gold);
 }
 
-/* --- Main Layout Sections --- */
-.main-container {
-    max-width: 900px;
+/* --- Week 3: CSS Grid Template Areas Layout --- */
+.grid-layout-container {
+    max-width: 1100px;
     margin: 2rem auto;
     padding: 0 1.5rem;
+    display: grid;
+    grid-template-columns: 280px 1fr;
+    gap: 2rem;
+    align-items: start;
+}
+
+/* Sidebar styling */
+.fun-fact-box {
+    background-color: #eef2f7;
+    border-left: 4px solid var(--accent-gold);
+    padding: 1.5rem;
+    border-radius: 6px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+}
+
+.fun-fact-box h2 {
+    color: var(--primary-navy);
+    margin-top: 0;
+    font-size: 1.2rem;
+}
+
+/* Content Column */
+.content-column {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
 }
 
 .content-section {
     background-color: var(--card-bg);
     padding: 2rem;
-    margin-bottom: 2rem;
     border-radius: 8px;
     box-shadow: 0 2px 4px rgba(0,0,0,0.05);
 }
@@ -81,6 +117,7 @@ body {
     display: flex;
     gap: 2rem;
     align-items: center;
+    flex-wrap: wrap;
 }
 
 .profile-img {
@@ -96,7 +133,7 @@ body {
     color: #666;
 }
 
-/* --- Quick Facts Table Styling --- */
+/* --- Quick Facts Table --- */
 .section-subtitle {
     font-style: italic;
     color: #555;
@@ -123,10 +160,10 @@ body {
     background-color: #f9fafb;
 }
 
-/* --- Hobbies Cards Grid (Week 2 Preview) --- */
+/* --- Hobbies Grid Cards --- */
 .hobbies-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
     gap: 1rem;
     margin-top: 1rem;
 }
@@ -145,20 +182,6 @@ body {
     font-size: 1.1rem;
 }
 
-/* --- Fun Fact Box --- */
-.fun-fact-box {
-    background-color: #eef2f7;
-    border-left: 4px solid var(--accent-gold);
-    padding: 1.5rem;
-    border-radius: 6px;
-    margin-bottom: 2rem;
-}
-
-.fun-fact-box h2 {
-    color: var(--primary-navy);
-    margin-top: 0;
-}
-
 /* --- Footer --- */
 .site-footer {
     background-color: var(--primary-navy);
@@ -171,4 +194,11 @@ body {
 .site-footer a {
     color: var(--accent-gold);
     text-decoration: none;
+}
+
+/* Responsive breakpoint for smaller screens */
+@media (max-width: 768px) {
+    .grid-layout-container {
+        grid-template-columns: 1fr;
+    }
 }
