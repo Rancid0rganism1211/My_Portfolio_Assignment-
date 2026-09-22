@@ -1,6 +1,6 @@
-/* --- CSS Variables --- */
+
 :root {
-    --primary-navy: #0a2540;
+    --primary-navy: #187736;
     --accent-gold: #c5a059;
     --bg-light: #f4f6f9;
     --card-bg: #ffffff;
@@ -17,7 +17,7 @@ body {
     line-height: 1.6;
 }
 
-/* --- Header & Flexbox Navigation --- */
+
 .site-header {
     background-color: var(--primary-navy);
     color: #ffffff;
